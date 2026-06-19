@@ -1,0 +1,6 @@
+# Abaikan folder build
+build/
+
+# Abaikan file binary lainnya
+*.exe
+*.o
