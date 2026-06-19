@@ -1,38 +1,35 @@
 #include <iostream>
 #include "../include/kalkulator.h"
 #include "../include/konversi.h"
+#include "../include/sorting.h" // Tambahkan header ini
+
 using namespace std;
 
 int main()
 {
-    int pil;
-    char lagi;
+    int pilihan;
 
-    do
+    cout << "=== MENU UTAMA ===" << endl;
+    cout << "1. Kalkulator" << endl;
+    cout << "2. Konversi Nilai" << endl;
+    cout << "3. Sorting Angka" << endl;
+    cout << "Pilih (1-3): ";
+    cin >> pilihan;
+
+    switch (pilihan)
     {
-        cout << "\n=== MENU UTAMA ===" << endl;
-        cout << "1. Kalkulator" << endl;
-        cout << "2. Konversi Nilai" << endl;
-        cout << "Pilih (1/2): ";
-        cin >> pil;
-
-        if (pil == 1)
-        {
-            jalankanKalkulator();
-        }
-        else if (pil == 2)
-        {
-            jalankanKonversi();
-        }
-        else
-        {
-            cout << "Pilihan tidak valid!" << endl;
-        }
-
-        cout << "\nBalik ke menu utama? (y/t): ";
-        cin >> lagi;
-
-    } while (lagi == 'y' || lagi == 'Y');
+    case 1:
+        jalankanKalkulator();
+        break;
+    case 2:
+        jalankanKonversi();
+        break;
+    case 3:
+        jalankanSorting();
+        break;
+    default:
+        cout << "Pilihan tidak valid!" << endl;
+    }
 
     return 0;
 }
