@@ -6,3 +6,4 @@ add_executable(ProgramUtama
     src/no1_kalkulator.cpp 
     src/no2_konversi.cpp
 )
+add_executable(ProgramUtama src/main.cpp src/no1_kalkulator.cpp src/no2_konversi.cpp src/sorting.cpp)
