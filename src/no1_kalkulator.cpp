@@ -9,13 +9,29 @@ void jalankanKalkulator()
     cout << "\n--- Kalkulator Sedang Bekerja ---" << endl;
     cout << "Masukkan angka 1: ";
     cin >> a;
-    cout << "Masukkan operator: ";
+    cout << "Masukkan operator (+, -, *, /): ";
     cin >> op;
     cout << "Masukkan angka 2: ";
     cin >> b;
 
-    if (op == '+')
+    switch (op)
+    {
+    case '+':
         cout << "Hasil: " << a + b << endl;
-    else
-        cout << "Operator belum didukung (tes saja)." << endl;
+        break;
+    case '-':
+        cout << "Hasil: " << a - b << endl;
+        break;
+    case '*':
+        cout << "Hasil: " << a * b << endl;
+        break;
+    case '/':
+        if (b != 0)
+            cout << "Hasil: " << a / b << endl;
+        else
+            cout << "Error: Tidak bisa dibagi nol!" << endl;
+        break;
+    default:
+        cout << "Operator tidak valid!" << endl;
+    }
 }
